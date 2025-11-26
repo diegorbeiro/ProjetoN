@@ -12,12 +12,16 @@
     <None Remove="Cadastro.jpg" />
     <None Remove="Inicio.jpg" />
     <None Remove="Login.jpg" />
+    <None Remove="Page1.jpg" />
+    <None Remove="Page2.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Cadastro.jpg" />
     <Resource Include="Inicio.jpg" />
     <Resource Include="Login.jpg" />
+    <Resource Include="Page1.jpg" />
+    <Resource Include="Page2.jpg" />
   </ItemGroup>
 
 </Project>

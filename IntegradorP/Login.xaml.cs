@@ -25,14 +25,19 @@ namespace IntegradorP
             InitializeComponent();
         }
 
-        private void Cadastro_Click(object sender, RoutedEventArgs e)
+        private void Entrar_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Cadastro());
+            NavigationService.Navigate(new Page1());
         }
 
         private void Button_Voltar(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Inicio());
+        }
+
+        private void Cadastro_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Cadastro());
         }
     }
 }

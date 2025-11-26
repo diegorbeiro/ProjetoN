@@ -11,8 +11,22 @@
     <Grid>
         <Viewbox Stretch="Fill">
             <Grid Width="800" Height="600">
-                <Image Source="/Cadastro.jpg" Stretch="Fill" Margin="-10,0,10,0"/>
-                <Button Content="Voltar" HorizontalAlignment="Left" Margin="8,540,0,0" VerticalAlignment="Top" Height="42" Width="30" Opacity="0.025" Click="Click_Voltar"/>
+                <Image Source="/Cadastro.jpg" Stretch="Fill"/>
+                <Button Content="Voltar" HorizontalAlignment="Left" Margin="16,540,0,0" VerticalAlignment="Top" Height="42" Width="30" Opacity="0.025" Click="Click_Voltar"/>
+                <Label x:Name="email" Content="" HorizontalAlignment="Left" Margin="494,192,0,0" VerticalAlignment="Top" Height="28" Width="173" FontSize="14"/>
+                <Label x:Name="email_Copiar" Content="" HorizontalAlignment="Left" Margin="494,343,0,0" VerticalAlignment="Top" Height="28" Width="173" FontSize="14"/>
+                <Label x:Name="email_Copiar1" Content="" HorizontalAlignment="Left" Margin="494,268,0,0" VerticalAlignment="Top" Height="28" Width="173" FontSize="14"/>
+                <Label x:Name="email_Copiar2" Content="" HorizontalAlignment="Left" Margin="494,420,0,0" VerticalAlignment="Top" Height="28" Width="173" FontSize="14"/>
+                <Button Content="Voltar" HorizontalAlignment="Left" Margin="568,526,0,0" VerticalAlignment="Top" Height="42" Width="99" Opacity="0.025" Click="Click_Voltar" RenderTransformOrigin="2.117,0.571">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
             </Grid>
         </Viewbox>
     </Grid>
