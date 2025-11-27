@@ -19,6 +19,13 @@ namespace IntegradorP
         public MainWindow()
         {
             InitializeComponent();
+
+            Conexdb.AbrirConexao();
+
+            if (Conexdb.Conexao == null && Conexdb.Conexao.State == System.Data.ConnectionState.Closed)
+            {
+                MessageBox.Show("Não foi possível conectar ao banco de dados quiz_jogador.", "Erro de Conexão", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

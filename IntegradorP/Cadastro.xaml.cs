@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,8 +29,24 @@ namespace IntegradorP
 
         private void Click_Voltar(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Login());
+
+            try
+            {
+                string sql = "INSERT INTO usuario (nome,email, senha) VALUES (@nome, @email, @senha)";
+                using (var cmdPontos = new MySqlCommand(sql, Conexdb.Conexao))
+                {
+                    cmdPontos.Parameters.AddWithValue("@email", tb_email);
+                    cmdPontos.Parameters.AddWithValue("@nome", "dfdfgf");
+                    cmdPontos.Parameters.AddWithValue("@senha", "123");
+                    cmdPontos.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao inserir dados: " + ex.Message);
+            }
         }
+
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {

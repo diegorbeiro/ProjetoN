@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Cadastro.jpg" />
     <Resource Include="Inicio.jpg" />
     <Resource Include="Login.jpg" />
