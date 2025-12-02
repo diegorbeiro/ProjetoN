@@ -16,21 +16,25 @@ using System.Windows.Shapes;
 namespace IntegradorP
 {
     /// <summary>
-    /// Interação lógica para Page2.xam
+    /// Interação lógica para Carrinho.xam
     /// </summary>
-    public partial class Page2 : Page
+    public partial class Carrinho : Page
     {
-        public Page2()
+        public Carrinho()
         {
             InitializeComponent();
         }
 
-        private void Button_Voltar(object sender, RoutedEventArgs e)
+        private void Click_Voltar(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Page1());
+            NavigationService.Navigate(new Inicio());
         }
 
-        private void Click_Voltar(object sender, RoutedEventArgs e)
+        private void Carrinho_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Carrinho());
+        }
+        private void Voltar_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Page1());
         }
@@ -38,28 +42,17 @@ namespace IntegradorP
         private void Login_Voltar(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Inicio());
-        }
-
-        private void Carrinho_Voltar(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Carrinho());
-        }
-
-
-        private void Carrinho_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Carrinho());
 
         }
 
         private void Cadastrar_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Login());
-
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Carrinho_Voltar(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new Carrinho());
 
         }
     }

@@ -52,5 +52,10 @@ namespace IntegradorP
         {
 
         }
+
+        private void tb_email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

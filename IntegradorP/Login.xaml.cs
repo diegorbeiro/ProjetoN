@@ -39,5 +39,16 @@ namespace IntegradorP
         {
             NavigationService.Navigate(new Cadastro());
         }
+
+        private void tb_email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Voltar_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Page1());
+
+        }
     }
 }

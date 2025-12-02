@@ -17,11 +17,14 @@
                 <Image Source="/Login.jpg" Stretch="Fill" Margin="-10,0,10,0"/>
                 <Button x:Name="Cadastro" Content="Cadastro" Background="{x:Null}" BorderBrush="{x:Null}" Click="Cadastro_Click" Width="110" Height="38" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="620,480,0,0" Opacity="0"/>
                 <Button Content="Voltar" HorizontalAlignment="Left" Margin="8,540,0,0" VerticalAlignment="Top" Height="42" Width="30" Opacity="0.025" Click="Button_Voltar"/>
-                <Label x:Name="email" Content="" HorizontalAlignment="Left" Margin="494,192,0,0" VerticalAlignment="Top" Height="28" Width="173" FontSize="14"/>
-                <Label x:Name="Nome" Content="" HorizontalAlignment="Left" Margin="494,266,0,0" VerticalAlignment="Top" Height="30" Width="173" FontSize="14"/>
-                <Label x:Name="Senha" Content="" HorizontalAlignment="Left" Margin="494,341,0,0" VerticalAlignment="Top" Height="30" Width="173" FontSize="14"/>
                 <Button x:Name="Entrar" Content="Entrar" Background="{x:Null}" BorderBrush="{x:Null}" Click="Entrar_Click" Width="106" Height="38" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="480,481,0,0" Opacity="0"/>
+                <Image Source="/Login.jpg" Stretch="Fill" Margin="-10,0,10,0"/>
+                <CheckBox Content="" HorizontalAlignment="Left" Margin="496,415,0,0" VerticalAlignment="Top" FontSize="14" Width="18" Height="17"/>
+                <Button x:Name="Voltar" Content="Voltar" HorizontalAlignment="Left" Margin="0,538,0,0" VerticalAlignment="Top" Opacity="0" Width="46" Height="46" Click="Voltar_Click"/>
             </Grid>
         </Viewbox>
+        <TextBox x:Name="tb_emails" HorizontalAlignment="Left" Margin="495,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}" Foreground="Black"/>
+        <TextBox x:Name="tb_nomes" HorizontalAlignment="Left" Margin="495,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}" Foreground="Black"/>
+        <TextBox x:Name="tb_senhas" HorizontalAlignment="Left" Margin="495,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}" Foreground="Black"/>
     </Grid>
 </Page>

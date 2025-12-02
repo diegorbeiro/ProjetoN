@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Cadastro.jpg" />
+    <None Remove="Carrinho.jpg" />
     <None Remove="Inicio.jpg" />
     <None Remove="Login.jpg" />
     <None Remove="Page1.jpg" />
@@ -22,6 +23,7 @@
 
   <ItemGroup>
     <Resource Include="Cadastro.jpg" />
+    <Resource Include="Carrinho.jpg" />
     <Resource Include="Inicio.jpg" />
     <Resource Include="Login.jpg" />
     <Resource Include="Page1.jpg" />

@@ -25,14 +25,14 @@ namespace IntegradorP
             InitializeComponent();
         }
 
-        private void Cadastro_Click(object sender, RoutedEventArgs e)
+        private void Carrinho_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Cadastro());
+            NavigationService.Navigate(new Carrinho());
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        private void Comprar_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Login());
+            NavigationService.Navigate(new Page1());
         }
     }
 }

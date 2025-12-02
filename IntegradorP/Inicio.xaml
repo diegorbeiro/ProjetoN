@@ -11,9 +11,63 @@
     <Grid>
         <Viewbox Stretch="Fill">
             <Grid Width="800" Height="600">
+                <Image Source="/Inicio.jpg" Stretch="Fill" Margin="-10,0,10,0"/>
                 <Image Source="/Inicio.jPg" Stretch="Fill" Margin="-10,0,10,0"/>
-                <Button x:Name="Cadastro" Content="Cadastro" Background="{x:Null}" BorderBrush="{x:Null}" Click="Cadastro_Click" Width="120" Height="38" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="222,469,0,0" Opacity="0"/>
-                <Button x:Name="Login" Content="Login" BorderBrush="{x:Null}" Click="Login_Click" Width="121" Height="38" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="412,469,0,0" Opacity="0"/>
+                <Button Content="Carrinho" 
+    VerticalAlignment="Top" 
+    Margin="224,468,0,0" 
+    Width="114" 
+    x:Name="Estoqe" 
+    Height="40" 
+    HorizontalAlignment="Left" 
+    FontSize="26" 
+    Foreground="White" 
+    Click="Carrinho_Click" 
+    BorderBrush="{x:Null}" 
+    Background="Black" 
+    FontFamily="Bold" 
+    FontWeight="Bold">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!-- Remover o efeito de pressionamento (azul no fundo) -->
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                    <!-- Mantém o fundo original -->
+                                </Trigger>
+                                <!-- Remover o efeito de foco (azul ao ganhar foco) -->
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                    <!-- Mantém o fundo original -->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Content="Comprar" VerticalAlignment="Top" Margin="415,468,0,0" Width="114" x:Name="Comprar" Height="40" HorizontalAlignment="Left" FontSize="26" Foreground="White" Click="Comprar_Click" BorderBrush="{x:Null}" Background="Black" FontFamily="Bold" FontWeight="Bold">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!-- Remover o efeito de pressionamento (azul no fundo) -->
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                    <!-- Mantém o fundo original -->
+                                </Trigger>
+                                <!-- Remover o efeito de foco (azul ao ganhar foco) -->
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                    <!-- Mantém o fundo original -->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
         </Viewbox>
     </Grid>
