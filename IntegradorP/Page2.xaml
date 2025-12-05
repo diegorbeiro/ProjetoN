@@ -37,7 +37,7 @@
  FontSize="18
                         " 
  Foreground="Black" 
- Click="Carrinho_Click" 
+ Click="Carrinho_Click"
  BorderBrush="{x:Null}" 
  Background="#FFFFFDF1" 
  FontFamily="Sitka Display" 
@@ -96,7 +96,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button x:Name="cp1" Content="Comprar" HorizontalAlignment="Left" Margin="63,550,0,0" VerticalAlignment="Top" Width="71" Click="Button_Click"/>
+                <Button x:Name="cp1" Content="Comprar" HorizontalAlignment="Left" Margin="63,550,0,0" VerticalAlignment="Top" Width="71" />
                 <Button x:Name="cp3" Content="Comprar" HorizontalAlignment="Left" Margin="467,550,0,0" VerticalAlignment="Top" Width="70"/>
                 <Button x:Name="cp2" Content="Comprar" HorizontalAlignment="Left" Margin="263,550,0,0" VerticalAlignment="Top" Width="71"/>
                 <Button x:Name="cp4" Content="Comprar" HorizontalAlignment="Left" Margin="663,550,0,0" VerticalAlignment="Top" Width="70"/>

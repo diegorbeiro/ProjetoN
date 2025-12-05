@@ -13,7 +13,7 @@
             <Grid Width="800" Height="600">
                 <Image x:Name="CSenha1" Source="/Cadastro.jpg" Stretch="Fill"/>
                 <Button Content="Voltar" HorizontalAlignment="Left" Margin="16,540,0,0" VerticalAlignment="Top" Height="42" Width="30" Opacity="0.025" Click="Click_Voltar"/>
-                <Button x:Name="Avançar" Content="Voltar" HorizontalAlignment="Left" Margin="568,531,0,0" VerticalAlignment="Top" Height="38" Width="99" Opacity="0.025" Click="Click_Voltar" RenderTransformOrigin="2.117,0.571">
+                <Button x:Name="Avançar" Content="Voltar" HorizontalAlignment="Left" Margin="568,529,0,0" VerticalAlignment="Top" Height="38" Width="99" Opacity="0.025" Click="Click_Voltar" RenderTransformOrigin="2.117,0.571">
                     <Button.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1"/>
@@ -27,7 +27,7 @@
                 <TextBox x:Name="tb_nome" HorizontalAlignment="Left" Margin="505,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}" Foreground="#FF080505"/>
                 <TextBox x:Name="tb_senha" HorizontalAlignment="Left" Margin="505,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}" Foreground="#FF0E0A0A"/>
                 <TextBox x:Name="tb_" HorizontalAlignment="Left" Margin="506,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}"/>
-                <CheckBox Content="" HorizontalAlignment="Left" Margin="503,486,0,0" VerticalAlignment="Top" FontSize="14" Width="18" Height="17"/>
+                <CheckBox x:Name="Check" Content="Check" HorizontalAlignment="Left" Margin="503,486,0,0" VerticalAlignment="Top" FontSize="14" Width="18" Height="17"/>
             </Grid>
         </Viewbox>
     </Grid>

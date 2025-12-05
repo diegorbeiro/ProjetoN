@@ -46,9 +46,9 @@ namespace IntegradorP
         }
 
 
-        private void Carrinho_Click(object sender, RoutedEventArgs e)
+        private void Inicio_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Carrinho());
+            NavigationService.Navigate(new Page1());
 
         }
 
@@ -58,7 +58,12 @@ namespace IntegradorP
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Carrinho_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Estoque());
+        }
+
+        private void cp2_Click(object sender, RoutedEventArgs e)
         {
 
         }

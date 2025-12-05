@@ -19,7 +19,7 @@
                 <Button Content="Carrinho" HorizontalAlignment="Left" Margin="730,10,0,0" VerticalAlignment="Top" Height="58" Width="39" Opacity="0.025" Click="Carrinho_Voltar"/>
                 <Button Content="Estoque" 
                 VerticalAlignment="Top" 
-                Margin="487,29,0,0" 
+                Margin="481,29,0,0" 
                 Width="96" 
                 x:Name="Estoqe" 
                 Height="27" 
@@ -52,7 +52,6 @@
                     </Button.Template>
                 </Button>
                 <Label x:Name="Contato" Content="   Contato" HorizontalAlignment="Left" Margin="226,25,0,0" VerticalAlignment="Top" Background="#FFFFFDF1" Foreground="Black" FontWeight="Bold" FontSize="18" Height="29" Width="85" FontFamily="Sitka Display"/>
-                <Label x:Name="Inicio" Content="Inicio" HorizontalAlignment="Left" Margin="136,25,0,0" VerticalAlignment="Top" Background="#FFFFFDF1" Foreground="Black" FontWeight="Bold" FontSize="18" Height="29" Width="73" FontFamily="Sitka Display"/>
                 <Label x:Name="Quem_somos" Content="    Quem Somos" HorizontalAlignment="Left" Margin="338,25,0,0" VerticalAlignment="Top" Background="#FFFFFDF1" Foreground="Black" FontWeight="Bold" FontSize="18" Height="29" Width="146" FontFamily="Sitka Display" RenderTransformOrigin="0.5,0.5">
                     <Label.RenderTransform>
                         <TransformGroup>
@@ -65,8 +64,8 @@
                 </Label>
                 <Button Content="Cadastrar" 
 VerticalAlignment="Top" 
-Margin="580,29,0,0" 
-Width="96" 
+Margin="574,29,0,0" 
+Width="102" 
 x:Name="Cadastrar" 
 Height="27" 
 HorizontalAlignment="Left" 
@@ -79,6 +78,40 @@ FontFamily="Sitka Display"
 FontWeight="Bold">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!-- Remover o efeito de pressionamento (azul no fundo) -->
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                    <!-- Mantém o fundo original -->
+                                </Trigger>
+                                <!-- Remover o efeito de foco (azul ao ganhar foco) -->
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                    <!-- Mantém o fundo original -->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Content="Inicio" 
+                    VerticalAlignment="Top" 
+                    Margin="125,27,0,0" 
+                    Width="96" 
+                    x:Name="Inicio" 
+                    Height="29" 
+                    HorizontalAlignment="Left" 
+                    FontSize="18" 
+                    Foreground="Black" 
+                    Click="Inicio_Click" 
+                    BorderBrush="{x:Null}" 
+                    Background="#FFFFFDF1" 
+                    FontFamily="Sitka Display" 
+                    FontWeight="Bold">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
                             <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
