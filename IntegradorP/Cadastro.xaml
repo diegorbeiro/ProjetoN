@@ -26,7 +26,7 @@
                 <TextBox x:Name="tb_email" HorizontalAlignment="Left" Margin="505,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}" Foreground="Black"/>
                 <TextBox x:Name="tb_nome" HorizontalAlignment="Left" Margin="505,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}" Foreground="#FF080505"/>
                 <TextBox x:Name="tb_senha" HorizontalAlignment="Left" Margin="505,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}" Foreground="#FF0E0A0A"/>
-                <TextBox x:Name="tb_" HorizontalAlignment="Left" Margin="506,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="tb_confSenha" HorizontalAlignment="Left" Margin="506,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_email_TextChanged" FontSize="16" BorderBrush="{x:Null}"/>
                 <CheckBox x:Name="Check" Content="Check" HorizontalAlignment="Left" Margin="503,486,0,0" VerticalAlignment="Top" FontSize="14" Width="18" Height="17"/>
             </Grid>
         </Viewbox>

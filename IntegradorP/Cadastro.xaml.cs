@@ -30,25 +30,31 @@ namespace IntegradorP
 
         private void Click_Voltar(object sender, RoutedEventArgs e)
         {
+            if (tb_confSenha.Text != tb_senha.Text)
+            {
+                MessageBox.Show("VALIDE DADOS", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
             try
             {
-                string sql = "INSERT INTO usuario (nome,email, senha) VALUES (@nome, @email, @senha)";
+                string sql = "INSERT INTO usuarios (email,nome,senha) VALUES (@email,@nome,@senha)";
                 using (var cmdPontos = new MySqlCommand(sql, Conexdb.Conexao))
                 {
-                    cmdPontos.Parameters.AddWithValue("@email", tb_email);
-                    cmdPontos.Parameters.AddWithValue("@nome", tb_nome);
-                    cmdPontos.Parameters.AddWithValue("@senha", tb_senha);
+                    cmdPontos.Parameters.AddWithValue("@email", tb_email.Text);
+                    cmdPontos.Parameters.AddWithValue("@nome", tb_nome.Text);
+                    cmdPontos.Parameters.AddWithValue("@senha", tb_senha.Text);
                     cmdPontos.ExecuteNonQuery();
                 }
             }
 
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao inserir dados: " + ex.Message);
             }
+
             if (Check.IsChecked == true)
             {
-                Estoque entrarEstoq = new Estoque();
+                Login entrarEstoq = new Login();
                 this.NavigationService.Navigate(entrarEstoq);
                 MessageBox.Show("Cadastro Realizado Com Sucesso", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
             }

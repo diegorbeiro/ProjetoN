@@ -60,7 +60,7 @@ namespace IntegradorP
 
         private void Carrinho_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Estoque());
+            NavigationService.Navigate(new Login());
         }
 
         private void cp2_Click(object sender, RoutedEventArgs e)

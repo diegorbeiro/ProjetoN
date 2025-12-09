@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,7 +52,7 @@ namespace IntegradorP
 
         private void Carrinho_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Carrinho());
+            NavigationService.Navigate(new Login());
         }
 
         private void Cadastrar_Click(object sender, RoutedEventArgs e)
@@ -60,22 +62,29 @@ namespace IntegradorP
 
         private void cp1_Click(object sender, RoutedEventArgs e)
         {
-
+            var btn = (Button)sender;
+            var value = btn.Tag.ToString();
+            AdicionaCarrinho(btn.Name, value);
         }
 
-        private void cp4_Click(object sender, RoutedEventArgs e)
+        private void AdicionaCarrinho(string item, string valor)
         {
+            //validar se existe ou não mudar apenas quantidade;
 
-        }
-
-        private void cp3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cp2_Click(object sender, RoutedEventArgs e)
-        {
-
+            try
+            {
+                string sql = "INSERT INTO nometabela (item,valor,quantidade) VALUES (@item,@valor,@quantidade)";
+                using (var cmdPontos = new MySqlCommand(sql, Conexdb.Conexao))
+                {
+                    cmdPontos.Parameters.AddWithValue("@item", item);
+                    cmdPontos.Parameters.AddWithValue("@valor",valor);
+                    cmdPontos.Parameters.AddWithValue("@quantidade", 1);
+                    cmdPontos.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

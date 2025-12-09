@@ -28,17 +28,56 @@ namespace IntegradorP
 
         private void Entrar_Click(object sender, RoutedEventArgs e)
         {
-            
-            if (Check.IsChecked == true)
+            var emailExist = false;
+            var senhaExist = false;
+            try
             {
-                Estoque entrarEstoq = new Estoque();
-                this.NavigationService.Navigate(entrarEstoq);
-                MessageBox.Show("Bem Vindo ao Estoque", "Entrada Permitida", MessageBoxButton.OK, MessageBoxImage.Information);
+                string sql = "SELECT * FROM usuarios";
+                var cmd = new MySqlCommand(sql, Conexdb.Conexao);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var email = reader.GetString("email");
+                        var senha = reader.GetString("senha");
+
+                        if (tb_emails.Text == email)
+                        {
+                            emailExist = true;
+                        }
+
+                        if (tb_senhas.Text == senha)
+                        {
+                            senhaExist = true;
+                        }
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao inserir dados: " + ex.Message);
+            }
+
+            if (emailExist && senhaExist)
+            {
+                if (Check.IsChecked == true)
+                {
+                    MessageBox.Show("Login realizado com sucesso!");
+
+                    this.NavigationService.Navigate(new Estoque());
+                }
+                else
+                {
+                    MessageBox.Show("Você precisa aceitar os termos e condições para prosseguir.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Você precisa aceitar os termos e condições para prosseguir.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Email ou senha incorretos.");
             }
+
         }
 
         private void Button_Voltar(object sender, RoutedEventArgs e)

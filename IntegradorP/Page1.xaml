@@ -100,10 +100,10 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button x:Name="cp1" Content="Comprar" HorizontalAlignment="Left" Margin="78,542,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
-                <Button x:Name="cp2" Content="Comprar" HorizontalAlignment="Left" Margin="652,543,0,0" VerticalAlignment="Top" Width="71" Click="cp2_Click"/>
-                <Button x:Name="cp3" Content="Comprar" HorizontalAlignment="Left" Margin="463,543,0,0" VerticalAlignment="Top" Width="71" Click="cp3_Click"/>
-                <Button x:Name="cp4" Content="Comprar" HorizontalAlignment="Left" Margin="267,543,0,0" VerticalAlignment="Top" Width="71" Click="cp4_Click"/>
+                <Button x:Name="cp1" Tag="100.00" Content="Comprar" HorizontalAlignment="Left" Margin="78,542,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
+                <Button x:Name="cp2" Content="Comprar" HorizontalAlignment="Left" Margin="652,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
+                <Button x:Name="cp3" Content="Comprar" HorizontalAlignment="Left" Margin="463,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
+                <Button x:Name="cp4" Content="Comprar" HorizontalAlignment="Left" Margin="267,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
             </Grid>
         </Viewbox>
     </Grid>
