@@ -16,44 +16,9 @@
                 </Grid.ColumnDefinitions>
                 <Image Source="/Page1.jpg" Stretch="Fill"/>
                 <Button Content="Voltar" HorizontalAlignment="Left" Margin="14,559,0,0" VerticalAlignment="Top" Height="34" Width="30" Opacity="0.025" Click="Atras_Voltar"/>
-                <Label x:Name="email_Copiar1" Content="" HorizontalAlignment="Left" Margin="494,268,0,0" VerticalAlignment="Top" Height="28" Width="173" FontSize="14"/>
                 <Button Content="Frente" HorizontalAlignment="Left" Margin="754,558,0,0" VerticalAlignment="Top" Height="34" Width="30" Opacity="0.025" Click="Button_Voltar"/>
                 <Button Content="Voltar" HorizontalAlignment="Left" Margin="29,6,0,0" VerticalAlignment="Top" Height="37" Width="30" Opacity="0.025" Click="Login_Voltar"/>
                 <Button Content="Carrinho" HorizontalAlignment="Left" Margin="726,8,0,0" VerticalAlignment="Top" Height="37" Width="30" Opacity="0.025" Click="Carrinho_Voltar"/>
-                <Button Content="Estoque" 
-                    VerticalAlignment="Top" 
-                    Margin="473,12,0,0" 
-                    Width="96" 
-                    x:Name="Estoqe" 
-                    Height="27" 
-                    HorizontalAlignment="Left" 
-                    FontSize="18" 
-                    Foreground="Black" 
-                    Click="Carrinho_Click" 
-                    BorderBrush="{x:Null}" 
-                    Background="#FFFFFDF1" 
-                    FontFamily="Sitka Display" 
-                    FontWeight="Bold">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                            <ControlTemplate.Triggers>
-                                <!-- Remover o efeito de pressionamento (azul no fundo) -->
-                                <Trigger Property="IsPressed" Value="True">
-                                    <Setter Property="Background" Value="#FFFFFDF1" />
-                                    <!-- Mantém o fundo original -->
-                                </Trigger>
-                                <!-- Remover o efeito de foco (azul ao ganhar foco) -->
-                                <Trigger Property="IsFocused" Value="True">
-                                    <Setter Property="Background" Value="#FFFFFDF1" />
-                                    <!-- Mantém o fundo original -->
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
                 <Label x:Name="Contato" Content="   Contato" HorizontalAlignment="Left" Margin="224,9,0,0" VerticalAlignment="Top" Background="#FFFFFDF1" Foreground="Black" FontWeight="Bold" FontSize="18" Height="29" Width="85" FontFamily="Sitka Display"/>
                 <Label x:Name="Inicio" Content="Inicio" HorizontalAlignment="Left" Margin="145,9,0,0" VerticalAlignment="Top" Background="#FFFFFDF1" Foreground="Black" FontWeight="Bold" FontSize="18" Height="29" Width="73" FontFamily="Sitka Display"/>
                 <Label x:Name="Quem_somos" Content="    Quem Somos" HorizontalAlignment="Center" Margin="0,9,0,0" VerticalAlignment="Top" Background="#FFFFFDF1" Foreground="Black" FontWeight="Bold" FontSize="18" Height="29" Width="146" FontFamily="Sitka Display" RenderTransformOrigin="0.5,0.5">
@@ -66,9 +31,9 @@
                         </TransformGroup>
                     </Label.RenderTransform>
                 </Label>
-                <Button Content="Cadastrar" 
+                <Button Content="Estoque" 
     VerticalAlignment="Top" 
-    Margin="566,12,0,0" 
+    Margin="560,12,0,0" 
     Width="96" 
     x:Name="Cadastrar" 
     Height="27" 
@@ -104,6 +69,49 @@
                 <Button x:Name="cp2" Content="Comprar" HorizontalAlignment="Left" Margin="652,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
                 <Button x:Name="cp3" Content="Comprar" HorizontalAlignment="Left" Margin="463,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
                 <Button x:Name="cp4" Content="Comprar" HorizontalAlignment="Left" Margin="267,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
+                <Label x:Name="quant" Content="0" HorizontalAlignment="Left" Margin="36,499,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="valr" Content="0" HorizontalAlignment="Left" Margin="164,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <Label x:Name="valr_Copiar" Content="0" HorizontalAlignment="Left" Margin="164,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <Label x:Name="valr_Copiar1" Content="0" HorizontalAlignment="Left" Margin="736,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <Label x:Name="valr_Copiar2" Content="0" HorizontalAlignment="Left" Margin="543,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White" RenderTransformOrigin="-0.77,0.474"/>
+                <Label x:Name="valr_Copiar3" Content="0" HorizontalAlignment="Left" Margin="353,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <Label x:Name="quant_Copiar" Content="0" HorizontalAlignment="Left" Margin="228,499,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="quant_Copiar1" Content="0" HorizontalAlignment="Left" Margin="419,499,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="quant_Copiar2" Content="0" HorizontalAlignment="Left" Margin="610,499,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
+                <Button Content="Cadastrar" 
+                    VerticalAlignment="Top" 
+                    Margin="479,12,0,0" 
+                    Width="96" 
+                    x:Name="Estoqe" 
+                    Height="27" 
+                    HorizontalAlignment="Left" 
+                    FontSize="18" 
+                    Foreground="Black" 
+                    Click="Carrinho_Click" 
+                    BorderBrush="{x:Null}" 
+                    Background="#FFFFFDF1" 
+                    FontFamily="Sitka Display" 
+                    FontWeight="Bold">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!-- Remover o efeito de pressionamento (azul no fundo) -->
+                                <Trigger Property="IsPressed" Value="True">
+                                    <!-- Mantém o fundo original -->
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                </Trigger>
+                                <!-- Remover o efeito de foco (azul ao ganhar foco) -->
+                                <Trigger Property="IsFocused" Value="True">
+                                    <!-- Mantém o fundo original -->
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
         </Viewbox>
     </Grid>

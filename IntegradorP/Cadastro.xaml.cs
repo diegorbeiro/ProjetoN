@@ -28,29 +28,43 @@ namespace IntegradorP
             InitializeComponent();
         }
 
-        private void Click_Voltar(object sender, RoutedEventArgs e)
+        private void Click_Avançar(object sender, RoutedEventArgs e)
         {
             if (tb_confSenha.Text != tb_senha.Text)
             {
                 MessageBox.Show("VALIDE DADOS", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-
-            try
+            var campos = new (string nomeCampo, string valor, string mensagemErro)[]
             {
-                string sql = "INSERT INTO usuarios (email,nome,senha) VALUES (@email,@nome,@senha)";
-                using (var cmdPontos = new MySqlCommand(sql, Conexdb.Conexao))
+                (tb_email.Text, "EMAIL", "O campo EMAIL não pode ser vazio!"),
+                (tb_nome.Text, "NOME", "O campo NOME não pode estar vazio!"),
+                (tb_senha.Text, "SENHA", "O campo SENHA não pode estar vazio!")
+            };
+
+            foreach (var campo in campos)
+            {
+                if (string.IsNullOrEmpty(campo.valor))
                 {
-                    cmdPontos.Parameters.AddWithValue("@email", tb_email.Text);
-                    cmdPontos.Parameters.AddWithValue("@nome", tb_nome.Text);
-                    cmdPontos.Parameters.AddWithValue("@senha", tb_senha.Text);
-                    cmdPontos.ExecuteNonQuery();
+                    MessageBox.Show(campo.mensagemErro);
+                    return;
                 }
             }
+            try
+                {
+                    string sql = "INSERT INTO usuarios (email,nome,senha) VALUES (@email,@nome,@senha)";
+                    using (var cmdPontos = new MySqlCommand(sql, Conexdb.Conexao))
+                    {
+                        cmdPontos.Parameters.AddWithValue("@email", tb_email.Text);
+                        cmdPontos.Parameters.AddWithValue("@nome", tb_nome.Text);
+                        cmdPontos.Parameters.AddWithValue("@senha", tb_senha.Text);
+                        cmdPontos.ExecuteNonQuery();
+                    }
+                }
 
-            catch (Exception ex)
-            {
-            }
+                catch (Exception ex)
+                {
+                }
 
             if (Check.IsChecked == true)
             {
@@ -64,15 +78,29 @@ namespace IntegradorP
             }
         }
 
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void Click_Voltar(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Login());
         }
 
         private void tb_email_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+            try
+            {
+                string sql = "INSERT INTO usuario (nome,email, senha) VALUES (@nome, @email, @senha)";
+                using (var cmdPontos = new MySqlCommand(sql, Conexdb.Conexao))
+                {
+                    cmdPontos.Parameters.AddWithValue("@email", tb_email);
+                    cmdPontos.Parameters.AddWithValue("@nome", tb_nome);
+                    cmdPontos.Parameters.AddWithValue("@senha", tb_senha);
+                    cmdPontos.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao inserir dados: " + ex.Message);
+            }
         }
     }
 }

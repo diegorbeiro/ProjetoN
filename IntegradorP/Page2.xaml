@@ -28,43 +28,9 @@
                         </TransformGroup>
                     </Label.RenderTransform>
                 </Label>
-                <Button Content="Estoque"  VerticalAlignment="Top" 
- Margin="474,6,0,0" 
- Width="93" 
- x:Name="Estoque" 
- Height="40" 
- HorizontalAlignment="Left" 
- FontSize="18
-                        " 
- Foreground="Black" 
- Click="Carrinho_Click"
- BorderBrush="{x:Null}" 
- Background="#FFFFFDF1" 
- FontFamily="Sitka Display" 
- FontWeight="Bold">
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                            <ControlTemplate.Triggers>
-                                <!-- Remover o efeito de pressionamento (azul no fundo) -->
-                                <Trigger Property="IsPressed" Value="True">
-                                    <Setter Property="Background" Value="#FFFFFDF1" />
-                                    <!-- Mantém o fundo original -->
-                                </Trigger>
-                                <!-- Remover o efeito de foco (azul ao ganhar foco) -->
-                                <Trigger Property="IsFocused" Value="True">
-                                    <Setter Property="Background" Value="#FFFFFDF1" />
-                                    <!-- Mantém o fundo original -->
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
 
-                <Button Content="Cadastrar"  VerticalAlignment="Top" 
-                    Margin="563,6,0,0" 
+                <Button Content="Estoque"  VerticalAlignment="Top" 
+                    Margin="559,6,0,0" 
                     Width="104" 
                     x:Name="Cadastrar1" 
                     Height="40" 
@@ -96,10 +62,51 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+                <Button Content="Cadastrar"  VerticalAlignment="Top" 
+ Margin="481,6,0,0" 
+ Width="93" 
+ x:Name="Estoque" 
+ Height="40" 
+ HorizontalAlignment="Left" 
+ FontSize="18                         " 
+ Foreground="Black" 
+ Click="Carrinho_Click"
+ BorderBrush="{x:Null}" 
+ Background="#FFFFFDF1" 
+ FontFamily="Sitka Display" 
+ FontWeight="Bold">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!-- Remover o efeito de pressionamento (azul no fundo) -->
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                    <!-- Mantém o fundo original -->
+                                </Trigger>
+                                <!-- Remover o efeito de foco (azul ao ganhar foco) -->
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFDF1" />
+                                    <!-- Mantém o fundo original -->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <Button x:Name="cp1" Content="Comprar" HorizontalAlignment="Left" Margin="63,550,0,0" VerticalAlignment="Top" Width="71" />
                 <Button x:Name="cp3" Content="Comprar" HorizontalAlignment="Left" Margin="467,550,0,0" VerticalAlignment="Top" Width="70"/>
                 <Button x:Name="cp2" Content="Comprar" HorizontalAlignment="Left" Margin="263,550,0,0" VerticalAlignment="Top" Width="71"/>
                 <Button x:Name="cp4" Content="Comprar" HorizontalAlignment="Left" Margin="663,550,0,0" VerticalAlignment="Top" Width="70"/>
+                <Label x:Name="valr_Copiar" Content="0" HorizontalAlignment="Left" Margin="160,276,0,0" VerticalAlignment="Top" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <Label x:Name="valr_Copiar1" Content="0" HorizontalAlignment="Left" Margin="760,276,0,0" VerticalAlignment="Top" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <Label x:Name="valr_Copiar2" Content="0" HorizontalAlignment="Left" Margin="559,276,0,0" VerticalAlignment="Top" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White" RenderTransformOrigin="-0.77,0.474"/>
+                <Label x:Name="valr_Copiar3" Content="0" HorizontalAlignment="Left" Margin="357,276,0,0" VerticalAlignment="Top" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <Label x:Name="quant" Content="0" HorizontalAlignment="Left" Margin="21,503,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="quant_Copiar" Content="0" HorizontalAlignment="Left" Margin="217,505,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="quant_Copiar1" Content="0" HorizontalAlignment="Left" Margin="419,505,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="quant_Copiar2" Content="0" HorizontalAlignment="Left" Margin="619,505,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
             </Grid>
         </Viewbox>
     </Grid>
