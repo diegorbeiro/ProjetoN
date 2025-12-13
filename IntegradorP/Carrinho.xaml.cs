@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,9 @@ namespace IntegradorP
         public Carrinho()
         {
             InitializeComponent();
+
+            var carrinhoList = ((App)Application.Current).CarrinhoList;
+            dgCarrinho.ItemsSource = carrinhoList;
         }
 
         private void Click_Voltar(object sender, RoutedEventArgs e)
@@ -58,7 +62,7 @@ namespace IntegradorP
 
         private void Carrinho_Click(object sender, RoutedEventArgs e)
         {
-
         }
+
     }
 }

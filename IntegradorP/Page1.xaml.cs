@@ -64,20 +64,21 @@ namespace IntegradorP
         {
             var btn = (Button)sender;
             var value = btn.Tag.ToString();
-            AdicionaCarrinho(btn.Name, value);
+
+
+            ((App)Application.Current).CarrinhoList.Add(new ItermCarrinho(btn.Name, double.Parse(value)));
+            MessageBox.Show("Produto Adicionado");
         }
 
         private void AdicionaCarrinho(string item, string valor)
         {
-            //validar se existe ou não mudar apenas quantidade;
-
             try
             {
-                string sql = "INSERT INTO nometabela (item,valor,quantidade) VALUES (@item,@valor,@quantidade)";
+                string sql = "INSERT INTO compra (NomeProduto,Valor,Quantidade) VALUES (@item,@valor,@quantidade)";
                 using (var cmdPontos = new MySqlCommand(sql, Conexdb.Conexao))
                 {
                     cmdPontos.Parameters.AddWithValue("@item", item);
-                    cmdPontos.Parameters.AddWithValue("@valor",valor);
+                    cmdPontos.Parameters.AddWithValue("@valor", valor);
                     cmdPontos.Parameters.AddWithValue("@quantidade", 1);
                     cmdPontos.ExecuteNonQuery();
                 }

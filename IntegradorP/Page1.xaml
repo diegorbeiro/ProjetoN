@@ -65,13 +65,13 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button x:Name="cp1" Tag="100.00" Content="Comprar" HorizontalAlignment="Left" Margin="78,542,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
+                <Button x:Name="cp1" Tag="100" Content="Adicionar Carrinho" HorizontalAlignment="Left" Margin="62,543,0,0" VerticalAlignment="Top" Width="106" Click="cp1_Click"/>
                 <Button x:Name="cp2" Content="Comprar" HorizontalAlignment="Left" Margin="652,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
                 <Button x:Name="cp3" Content="Comprar" HorizontalAlignment="Left" Margin="463,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
                 <Button x:Name="cp4" Content="Comprar" HorizontalAlignment="Left" Margin="267,543,0,0" VerticalAlignment="Top" Width="71" Click="cp1_Click"/>
                 <Label x:Name="quant" Content="0" HorizontalAlignment="Left" Margin="36,499,0,0" VerticalAlignment="Top" Background="White" FontWeight="Bold" FontSize="18"/>
                 <Label x:Name="valr" Content="0" HorizontalAlignment="Left" Margin="164,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
-                <Label x:Name="valr_Copiar" Content="0" HorizontalAlignment="Left" Margin="164,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <Label x:Name="lbValor" Content="R$250,00" HorizontalAlignment="Left" Margin="96,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
                 <Label x:Name="valr_Copiar1" Content="0" HorizontalAlignment="Left" Margin="736,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>
                 <Label x:Name="valr_Copiar2" Content="0" HorizontalAlignment="Left" Margin="543,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White" RenderTransformOrigin="-0.77,0.474"/>
                 <Label x:Name="valr_Copiar3" Content="0" HorizontalAlignment="Left" Margin="353,0,0,0" VerticalAlignment="Center" Background="Black" FontWeight="Bold" FontSize="18" Foreground="White"/>

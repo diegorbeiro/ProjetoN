@@ -130,6 +130,13 @@ FontWeight="Bold">
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+                <DataGrid x:Name="dgCarrinho" AutoGenerateColumns="False" Margin="0,73,0,47" 
+          ItemsSource="{Binding}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Produto" Binding="{Binding Item}" Width="*" MinWidth="100"/>
+                        <DataGridTextColumn Header="Valor" Binding="{Binding Valor}" Width="*" MinWidth="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Viewbox>
     </Grid>
