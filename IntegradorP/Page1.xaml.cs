@@ -60,17 +60,7 @@ namespace IntegradorP
             NavigationService.Navigate(new Login());
         }
 
-        private void cp1_Click(object sender, RoutedEventArgs e)
-        {
-            var btn = (Button)sender;
-            var value = btn.Tag.ToString();
-
-
-            ((App)Application.Current).CarrinhoList.Add(new ItermCarrinho(btn.Name, double.Parse(value)));
-            MessageBox.Show("Produto Adicionado");
-        }
-
-        private void AdicionaCarrinho(string item, string valor)
+        private void AdicionaCarrinho(string item, double valor)
         {
             try
             {
@@ -82,10 +72,52 @@ namespace IntegradorP
                     cmdPontos.Parameters.AddWithValue("@quantidade", 1);
                     cmdPontos.ExecuteNonQuery();
                 }
+                MessageBox.Show("Produto Adicionado");
             }
             catch (Exception ex)
             {
             }
+        }
+
+        private void AdicionaCarrinho(object sender, RoutedEventArgs e)
+        {
+            var btn = (Button)sender;
+            var value = btn.Tag.ToString();
+            AdicionaCarrinho(btn.Name, double.Parse(value));
+            ((App)Application.Current).CarrinhoList.Add(new ItermCarrinho(btn.Name, double.Parse(value)));
+        }
+
+        private void Sapato_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = (Button)sender;
+            var value = btn.Tag.ToString();
+            AdicionaCarrinho(btn.Name, double.Parse(value));
+            ((App)Application.Current).CarrinhoList.Add(new ItermCarrinho(btn.Name, double.Parse(value)));
+        }
+
+        private void Moletom_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = (Button)sender;
+            var value = btn.Tag.ToString();
+            AdicionaCarrinho(btn.Name, double.Parse(value));
+            ((App)Application.Current).CarrinhoList.Add(new ItermCarrinho(btn.Name, double.Parse(value)));
+        }
+
+        private void Oculos_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = (Button)sender;
+            var value = btn.Tag.ToString();
+            AdicionaCarrinho(btn.Name, double.Parse(value));
+            ((App)Application.Current).CarrinhoList.Add(new ItermCarrinho(btn.Name, double.Parse(value)));
+
+        }
+
+        private void Relógio_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = (Button)sender;
+            var value = btn.Tag.ToString();
+            AdicionaCarrinho(btn.Name, double.Parse(value));
+            ((App)Application.Current).CarrinhoList.Add(new ItermCarrinho(btn.Name, double.Parse(value)));
         }
     }
 }
