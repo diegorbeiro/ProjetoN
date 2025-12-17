@@ -66,6 +66,7 @@ namespace IntegradorP
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new Finalizar());
 
         }
     }

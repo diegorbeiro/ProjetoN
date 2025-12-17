@@ -12,6 +12,7 @@
     <None Remove="Cadastro.jpg" />
     <None Remove="Carrinho.jpg" />
     <None Remove="Estoque.jpg" />
+    <None Remove="finalizar.jpg" />
     <None Remove="Inicio.jpg" />
     <None Remove="Login.jpg" />
     <None Remove="Page1.jpg" />
@@ -26,6 +27,7 @@
     <Resource Include="Cadastro.jpg" />
     <Resource Include="Carrinho.jpg" />
     <Resource Include="Estoque.jpg" />
+    <Resource Include="finalizar.jpg" />
     <Resource Include="Inicio.jpg" />
     <Resource Include="Login.jpg" />
     <Resource Include="Page1.jpg" />

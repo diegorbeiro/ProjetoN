@@ -1,0 +1,31 @@
+﻿<Page x:Class="IntegradorP.Finalizar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IntegradorP"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Finalizar">
+
+    <Grid>
+        <Viewbox Stretch="Fill">
+            <Grid Width="800" Height="600">
+                <Image Source="/finalizar.jpg" Stretch="Fill" Margin="3,2,7,-2"/>
+                <TextBox x:Name="tb_nome" HorizontalAlignment="Left" Margin="516,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_telefone_TextChanged" FontSize="16" BorderBrush="Black" Foreground="Black"/>
+                <TextBox x:Name="tb_nome_Copiar" HorizontalAlignment="Left" Margin="516,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_nome_TextChanged" FontSize="16" BorderBrush="Black" Foreground="Black"/>
+                <TextBox x:Name="tb_endereço" HorizontalAlignment="Left" Margin="516,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_nomes_TextChanged" FontSize="16" BorderBrush="Black" Foreground="Black"/>
+                <TextBox x:Name="tb_cep" HorizontalAlignment="Left" Margin="516,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_cep_TextChanged" FontSize="16" BorderBrush="Black" Foreground="Black"/>
+                <TextBox x:Name="tb_telefone" HorizontalAlignment="Left" Margin="516,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Height="26" TextChanged="tb_endereço_TextChanged" FontSize="16" BorderBrush="Black" Foreground="Black"/>
+                <Label Content="Nome Completo" HorizontalAlignment="Left" Margin="412,120,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="Endereço" HorizontalAlignment="Left" Margin="453,188,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="CEP" HorizontalAlignment="Left" Margin="480,259,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="Telefone" HorizontalAlignment="Left" Margin="453,338,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="CHECKOUT" HorizontalAlignment="Left" Margin="569,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Background="#FFC5C5C5" BorderBrush="Black"/>
+                <Label Content="Cidade" HorizontalAlignment="Left" Margin="453,410,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Button Content="FINALIZAR COMPRA" Click="Finali_Click" BorderBrush="#FF18FF04" Margin="551,486,105,78" FontWeight="Bold" Foreground="Black"/>
+                <Button Content="CONTINUAR COMPRANDO" Click="ContComp_Click" BorderBrush="#FF18FF04" Margin="533,541,87,28" FontWeight="Bold" Foreground="Black"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Page>
