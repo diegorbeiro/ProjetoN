@@ -27,6 +27,14 @@ namespace IntegradorP
 
             var carrinhoList = ((App)Application.Current).CarrinhoList;
             dgCarrinho.ItemsSource = carrinhoList;
+
+            var total = 0.0;
+
+            for (int i = 0; i < carrinhoList.Count; i++)
+            {
+                total += carrinhoList[i].Valor;
+            }
+            lbTotal.Content += total.ToString();
         }
 
         private void Click_Voltar(object sender, RoutedEventArgs e)
@@ -67,6 +75,11 @@ namespace IntegradorP
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Finalizar());
+
+        }
+
+        private void dgCarrinho_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

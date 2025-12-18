@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,14 +41,53 @@ namespace IntegradorP
 
         private void btCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            string sqlUpdate = "UPDATE compra SET NomeProduto = @nome, Quantidade = @qt WHERE NomeProduto = @item";
-            using (var cmdUpdate = new MySqlCommand(sqlUpdate, Conexdb.Conexao))
+
+            if (string.IsNullOrEmpty(cbItems.Text) || string.IsNullOrEmpty(tbQT.Text))
             {
-                cmdUpdate.Parameters.AddWithValue("@nome", cbItems.SelectionBoxItem);
-                cmdUpdate.Parameters.AddWithValue("@qt", tbQT.Text);
-                cmdUpdate.Parameters.AddWithValue("@item", cbItems.SelectionBoxItem);
-                cmdUpdate.ExecuteNonQuery();
+                MessageBox.Show("Insira um valor");
+                return;
             }
+
+            string sqlInsert = "INSERT INTO compra (NomeProduto, Valor, Quantidade) VALUES (@nome,@valor, @qt)";
+            var valor = 0.0;
+
+            switch (cbItems.Text)
+            {
+                case "Sapato":
+                    valor = 257.88;
+                    break;
+
+                case "Moletom":
+                    valor = 95.99;
+                    break;
+
+                case "Oculos":
+                    valor = 124.95;
+                    break;
+
+                case "Relógio":
+                    valor = 149.95;
+                    break;
+            }
+
+            try
+            {
+                using (var cmdInsert = new MySqlCommand(sqlInsert, Conexdb.Conexao))
+                {
+                    cmdInsert.Parameters.AddWithValue("@nome", cbItems.SelectionBoxItem);
+                    cmdInsert.Parameters.AddWithValue("@qt", tbQT.Text);
+                    cmdInsert.Parameters.AddWithValue("@valor", valor);
+
+                    cmdInsert.ExecuteNonQuery();
+                }
+                MessageBox.Show("Produto cadastrado");
+            }
+            catch (Exception ex)
+            {
+                // trate o erro aqui (MessageBox, log, etc.)
+            }
+
+
         }
     }
 }

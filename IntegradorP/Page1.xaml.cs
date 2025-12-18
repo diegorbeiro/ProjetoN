@@ -115,11 +115,11 @@ namespace IntegradorP
                         cmdUpdate.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show("Quantidade do produto atualizada");
+                    MessageBox.Show("Adicionado ao Carrinho");
                 }
                 else
                 {
-                    MessageBox.Show("Não há quantidade suficiente para diminuir");
+                    MessageBox.Show("Sem Estoque");
                 }
             }
             catch (Exception ex)

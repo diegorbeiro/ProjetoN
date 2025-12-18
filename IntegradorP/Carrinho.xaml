@@ -131,13 +131,13 @@ FontWeight="Bold">
                     </Button.Template>
                 </Button>
                 <DataGrid x:Name="dgCarrinho" AutoGenerateColumns="False" Margin="0,73,0,47" 
-          ItemsSource="{Binding}">
+          ItemsSource="{Binding}" SelectionChanged="dgCarrinho_SelectionChanged">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Produto" Binding="{Binding Item}" Width="*" MinWidth="250"/>
                         <DataGridTextColumn Header="Valor" Binding="{Binding Valor}" Width="*" MinWidth="250"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <Label Content="Total: " HorizontalAlignment="Left" Margin="591,450,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+                <Label x:Name="lbTotal" Content="Total: " HorizontalAlignment="Left" Margin="591,450,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
                 <Label HorizontalAlignment="Left" Margin="591,492,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="#FF23C151">
                     <Button Content="Ir Para Pagamento" Width="194" Click="Button_Click" BorderBrush="{x:Null}"/>
                 </Label>
